@@ -35,6 +35,6 @@ norma_chol_A = norm(b - A*x_chol_A)/norm(x_chol_A, type =  "2")
 
 norma_chol_H = norm(b - H*x_chol_H)/norm(x_chol_H, type =  "2")
 
-norma_comando_A = norm(x_comando_A - A*x_comando_A)/norm(x_comando_A, type =  "2")
+norma_comando_A = norm(x_comando_A - x_chol_A, type = "2")/norm(x_comando_A, type =  "2")
 
-norma_comando_H = norm(x_comando_H - H*x_comando_H)/norm(x_comando_H, type =  "2")
+norma_comando_H = norm(x_comando_H - x_chol_H, type = "2")/norm(x_comando_H, type =  "2")
